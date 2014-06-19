@@ -1,4 +1,4 @@
-# About x-video
+# About x-camera
 A X-Tag based Web Component to access a camera using `getUserMedia`.
 
 ## Methods
@@ -22,16 +22,16 @@ The `pause` Method stops streaming.
 
 ```
 <!-- basic -->
-<x-video></x-video>
+<x-camera></x-camera>
 
 <!-- do not start streaming -->
-<x-video play="false"></x-video>
+<x-camera play="false"></x-camera>
 
 <!-- set videoCanvas size to width/height (defaults to 480x320) -->
-<x-video videowidth="480" videoheight="320"></x-video>
+<x-camera videowidth="480" videoheight="320"></x-camera>
 
 <!-- hide internal video element -->
-<x-video video="hidden"></x-video>
+<x-camera video="hidden"></x-camera>
 
 ```
 
@@ -40,7 +40,7 @@ Canvas you could get it as described below:
 
 ```
 document.addEventListener('DOMComponentsLoaded', function(){
-    var myVideo = document.querySelector('x-video'); // Or use an id.
+    var myVideo = document.querySelector('x-camera'); // Or use an id.
     var videoCanvas = myVideo.videoCanvas;
 });
 ```
