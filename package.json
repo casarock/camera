@@ -1,7 +1,7 @@
 {
   "name": "x-video",
   "description": "Provide a x-video tag for easy acces to webcam on a capable browser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Carsten Sandtner",
   "dependencies": {},
   "devDependencies": {

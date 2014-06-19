@@ -1,7 +1,7 @@
 {
   "name": "x-camera",
   "tagName": "x-camera",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Carsten Sandtner",
   "description": "Provide a x-camera tag for easy access to webcam on a capable browser",
   "demo": "demo/index.html",
