@@ -48,8 +48,7 @@ document.addEventListener('DOMComponentsLoaded', function(){
 look at `demo-canvas.html`.
 
 # Download it
-
-
+Use bower: `bower install x-tag-camera`
 
 # Dev Setup
 
