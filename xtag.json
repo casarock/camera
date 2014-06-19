@@ -1,0 +1,35 @@
+{
+  "name": "x-camera",
+  "tagName": "x-camera",
+  "version": "0.1.0",
+  "author": "Carsten Sandtner",
+  "description": "Provide a x-camera tag for easy access to webcam on a capable browser",
+  "demo": "demo/index.html",
+  "compatibility": {
+    "firefox": 5,
+    "chrome": 4,
+    "ie": 9,
+    "opera": 12,
+    "android": 2.1,
+    "ios": 4
+  },
+  "documentation": {
+    "description": "Provide a x-camera tag for easy acces to webcam on a capable browser",
+    "attributes": {
+      "play": "set to false to prevent auto play (stream)",
+      "videowidth": "Width of video element",
+      "videoheight": "Height of video element",
+      "video": "Set to 'hidden' to prevent video element to be shown."
+    },
+    "events": {
+    },
+    "methods": {
+      "play": "Play/Start video stream",
+      "pause": "Pause video stream"
+    },
+    "getters": {
+      "videoCanvas": "Returns internal video canvas/element"
+    },
+    "setters": {}
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>x-video - X-Tag</title>
+
+    <link rel="stylesheet" type="text/css" href="x-tag-components.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/camera.css"/>
+
+    <script type="text/javascript" src="x-tag-components.js"></script>
+    <script type="text/javascript" src="../src/camera.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body id="app">
+
+<x-camera videowidth="480" videoheight="320" video="hidden"></x-camera>
+<canvas width="480" height="320" id="renderCanvas"></canvas>
+<button disabled id="start">Pause</button>
+</body>
+
+<script type="text/javascript">
+
+    window.requestAnimationFrame = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame;
+
+    window.cancelRequestAnimationFrame = window.cancelAnimationFrame ||
+            window.webkitCancelRequestAnimationFrame ||
+            window.mozCancelRequestAnimationFrame ||
+            window.oCancelRequestAnimationFrame ||
+            window.msCancelRequestAnimationFrame;
+
+    document.addEventListener('DOMComponentsLoaded', function () {
+
+        var canvas = document.querySelector('#renderCanvas');
+        var playButton = document.querySelector('#start');
+        var ctx = canvas.getContext('2d');
+        var animFrameId, streaming = true;
+        var myVideo = document.querySelector('x-camera'); // Or use an id.
+        var videoCanvas = myVideo.videoCanvas;
+
+        myVideo.addEventListener('canplay', function() {
+            playButton.disabled = false;
+            draw();
+        });
+
+        playButton.addEventListener('click', function() {
+            if (!streaming) {
+                myVideo.play();
+                draw();
+                playButton.innerHTML = "Pause";
+                streaming = true;
+            } else {
+                myVideo.pause();
+                window.cancelRequestAnimationFrame(animFrameId);
+                playButton.innerHTML = "Play";
+                streaming = false;
+            }
+        });
+
+        function draw() {
+            ctx.drawImage(videoCanvas, 0, 0, 480, 320);
+            animFrameId = window.requestAnimationFrame(draw);
+        }
+
+    });
+
+</script>
+
+</html>
