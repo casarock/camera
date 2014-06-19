@@ -1,16 +1,16 @@
 {
   "name": "x-video",
   "description": "Provide a x-video tag for easy acces to webcam on a capable browser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Carsten Sandtner",
   "keywords": [
-  	"Element",
+    "Element",
     "web-components",
     "x-tag"
   ],
   "main": [
-    "src/main.js"
-    ,"src/main.css"
+    "src/main.js",
+    "src/main.css"
   ],
   "dependencies": {
     "x-tag-core": "*"
