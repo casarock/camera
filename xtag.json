@@ -9,9 +9,7 @@
     "firefox": 5,
     "chrome": 4,
     "ie": 9,
-    "opera": 12,
-    "android": 2.1,
-    "ios": 4
+    "opera": 12
   },
   "documentation": {
     "description": "Provide a x-camera tag for easy acces to webcam on a capable browser",
