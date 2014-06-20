@@ -52,8 +52,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', ['jshint', 'smush-components']);
   grunt.registerTask('bump:patch', ['bumpup:patch', 'tagrelease']);
+  grunt.registerTask('bump:minor', ['bumpup:minor', 'tagrelease']);
+  grunt.registerTask('bump:major', ['bumpup:major', 'tagrelease']);
 
-  grunt.registerTask('push', ['exec:update_master', 'exec:update_gh_pages']);
+  grunt.registerTask('push', ['exec:update_master']);//, 'exec:update_gh_pages']);
   grunt.registerTask('bump-push', ['bump:patch', 'push']);
+  grunt.registerTask('bump-minor-push', ['bump:minor', 'push']);
+  grunt.registerTask('bump-major-push', ['bump:major', 'push']);
 
 };
